@@ -19,6 +19,16 @@
         <div class="container-fluid">
             <div id="cabecera"></div>
             
+            <div id="links">
+                <form action="#" method="POST">
+                    <input type="text" name="txtUsuario" placeholder="Usuario">
+                    <input type="password" name="txtClave" placeholder="Clave">
+                    <button type="submit" class="btn btn-primary btn-sm">Ingresar</button>
+                    <button type="button" class="btn btn-secondary btn-sm">Registrarse</button>
+                </form>
+                
+            </div>
+            
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
               <a class="navbar-brand" href="#">Nombre
                   <img src="imagenes/icono_pastel.png">

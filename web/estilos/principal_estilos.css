@@ -10,7 +10,7 @@ and open the template in the editor.
 
 .container-fluid #cabecera
 {
-              height: 150px;
+              height: 100px;
     background-color: #f7abff;
     
 }
@@ -25,4 +25,33 @@ and open the template in the editor.
 .container
 {
     margin-top: 100px;
+}
+
+.container-fluid #links
+{
+              height: 50px;
+    background-color: #f7abff;
+          text-align: right;
+}
+.container-fluid #links input[type=text]
+{
+          width: 120px;
+           height: 28px;
+          padding: 12px 20px;
+           margin: 8px 0;
+          display: inline-block;
+           border: 1px solid #ccc;
+    border-radius: 4px;
+       box-sizing: border-box;
+}
+.container-fluid #links input[type=password]
+{
+            width: 120px;
+           height: 28px;
+          padding: 12px 20px;
+           margin: 8px 0;
+          display: inline-block;
+           border: 1px solid #ccc;
+    border-radius: 4px;
+       box-sizing: border-box;
 }
