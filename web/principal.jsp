@@ -24,7 +24,7 @@
                     <input type="text" name="txtUsuario" placeholder="Usuario">
                     <input type="password" name="txtClave" placeholder="Clave">
                     <button type="submit" class="btn btn-primary btn-sm">Ingresar</button>
-                    <button type="button" class="btn btn-secondary btn-sm">Registrarse</button>
+                    <a href="registro.jsp" class="btn btn-secondary btn-sm">Registrarse</a>
                 </form>
                 
             </div>
