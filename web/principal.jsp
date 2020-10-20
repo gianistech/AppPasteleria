@@ -4,6 +4,10 @@
     Author     : Gianmarco
 --%>
 
+<%--Área de importación--%>
+<%@page import="java.sql.Connection"%><!--Implementar con método conectar-->
+<%@page import="Config.Conexion"%> <!--Método conectar-->
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -101,6 +105,20 @@
                 </div>
             
             </div>
+            
+            <%--Prueba de conexión
+            <%
+                    Conexion cn = new Conexion();
+                    
+                    Connection con =  cn.conectar();
+                    
+                    if(con!=null)
+                    {
+                        out.println("Conexión exitosa");
+                    }
+
+            %> 
+            --%>
             
             <div id="pie"></div>
         </div>
