@@ -7,7 +7,6 @@ package Modelo;
  */
 public class Usuario {
     private int id;
-    private Persona idPersona;
     private String usuario;
     private String clave;
 
@@ -20,14 +19,6 @@ public class Usuario {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public Persona getIdPersona() {
-        return idPersona;
-    }
-
-    public void setIdPersona(Persona idPersona) {
-        this.idPersona = idPersona;
     }
 
     public String getUsuario() {

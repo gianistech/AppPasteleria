@@ -9,6 +9,7 @@ import java.sql.Date; //Clase:Tipo de dato fecha(date)
  */
 public class Persona {
     private int id;
+    private Usuario idUsuario;
     private String nombre;
     private String apellidos;
     private Date fechaNac;
@@ -25,6 +26,14 @@ public class Persona {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public Usuario getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(Usuario idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
     public String getNombre() {
@@ -74,5 +83,6 @@ public class Persona {
     public void setCorreo(String correo) {
         this.correo = correo;
     }
+    
     
 }
