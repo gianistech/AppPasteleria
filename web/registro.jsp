@@ -16,7 +16,7 @@
     <body>
         <div class="container">
             <h2>Registro de Usuario</h2>
-            <form action="#" method="POST">
+            <form action="ServletUsuario" method="POST">
                 <div class="form-group">
                     <label for="nombre">Nombre(s):</label>
                     <input type="text" name="txtNombre" class="form-control">

@@ -8,7 +8,7 @@ Nombre VARCHAR(60) NOT NULL,
 Apellidos VARCHAR(60) NOT NULL,
 FechaNac DATE,
 Edad INT,
-Genero CHAR(1),
+Genero VARCHAR(20),
 Correo VARCHAR(50) NOT NULL,
 FOREIGN KEY (IdUsuario) REFERENCES tb_Usuario(Id)
 );
@@ -18,4 +18,5 @@ Id INT PRIMARY KEY AUTO_INCREMENT,
 Usuario VARCHAR(40) NOT NULL,
 Clave VARCHAR(40) NOT NULL
 );
+
 

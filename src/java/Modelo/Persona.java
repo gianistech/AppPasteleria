@@ -14,7 +14,7 @@ public class Persona {
     private String apellidos;
     private Date fechaNac;
     private int edad;
-    private char genero;
+    private String genero;
     private String correo;
 
     public Persona() {
@@ -68,11 +68,11 @@ public class Persona {
         this.edad = edad;
     }
 
-    public char getGenero() {
+    public String getGenero() {
         return genero;
     }
 
-    public void setGenero(char genero) {
+    public void setGenero(String genero) {
         this.genero = genero;
     }
 
@@ -83,6 +83,7 @@ public class Persona {
     public void setCorreo(String correo) {
         this.correo = correo;
     }
+
     
-    
+
 }

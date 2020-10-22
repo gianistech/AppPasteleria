@@ -12,6 +12,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+/***Área de importación***/
+import Modelo.Persona;       //Tabla
+import Modelo.UsuarioModel; //Método insertar usuario
+import java.sql.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+
 /**
  *
  * @author Gianmarco
@@ -70,7 +77,34 @@ public class ServletUsuario extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        //processRequest(request, response);
+        
+           try (PrintWriter out = response.getWriter()) {
+               
+               Persona per = new Persona(); //Instancia
+               
+              if(request.getParameter("btnRegistrar")!=null)
+              {
+                  per.setNombre(request.getParameter("txtNombre"));
+                  per.setApellidos(request.getParameter("txtApellidos"));
+                  
+                  DateFormat f = new SimpleDateFormat("yyyy-MM-dd");
+                  
+                  try {
+                      per.setFechaNac((Date) f.parse(request.getParameter("txtFechaNac")));
+                  } catch (Exception e) {
+                      System.out.println("ServletUsuario.Date" + e.getMessage());
+                  }
+                  
+                  per.setEdad(Integer.parseInt(request.getParameter("txtEdad")));
+                  per.setGenero(request.getParameter("cboGenero"));
+                  per.setCorreo(request.getParameter("txtCorreo"));
+                  //Composición
+                  
+                  
+              }
+
+        }
     }
 
     /**
