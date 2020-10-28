@@ -14,6 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /***Área de importación***/
 import Modelo.Persona;       //Tabla
+import Modelo.Usuario;
 import Modelo.UsuarioModel; //Método insertar usuario
 import java.sql.Date;
 import java.text.DateFormat;
@@ -24,6 +25,9 @@ import java.text.SimpleDateFormat;
  * @author Gianmarco
  */
 public class ServletUsuario extends HttpServlet {
+    
+    UsuarioModel usumo = new UsuarioModel();
+    
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -100,8 +104,15 @@ public class ServletUsuario extends HttpServlet {
                   per.setGenero(request.getParameter("cboGenero"));
                   per.setCorreo(request.getParameter("txtCorreo"));
                   //Composición
+                  Usuario usu = new Usuario();
+                  int idUsuario = Integer.parseInt(request.getParameter("txtUsuario"));
                   
+                  usu.setId(idUsuario);
+                  per.setIdUsuario(usu);
                   
+                  usumo.insertarUsuario(per);
+                  
+                  response.sendRedirect("principal.jsp");
               }
 
         }
